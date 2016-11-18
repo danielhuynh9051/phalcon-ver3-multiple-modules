@@ -35,5 +35,11 @@
             'action' => 'index'
         ]);
     ```
-#### Done! Hope it'll help you.
-###### Daniel - sir.truonghuynh@gmail.com - https://fb.com/mr.d.luffy.93
+##### Set Vim font to a Nerd Font
+
+Linux
+ ```vim
+ set guifont=<FONT_NAME> <FONT_SIZE>
+ ```
+## Done! Hope it'll help you.
+### Daniel - sir.truonghuynh@gmail.com - https://fb.com/mr.d.luffy.93
