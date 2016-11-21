@@ -37,15 +37,5 @@
         'user' => ['className' => 'Service\Modules\User\Module']
     ```
 
-7. Go to `routes.php` file and add `<new router>` for `<new module>`. Example:
-
-    ```vim
-        $router->add('/user', [
-            'module' => 'user',
-            'controller' => 'index',
-            'action' => 'index'
-        ]);
-    ```
-
 ## Done! Hope it'll help you.
 ### Daniel - sir.truonghuynh@gmail.com - https://fb.com/mr.d.luffy.93
