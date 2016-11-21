@@ -1,5 +1,5 @@
 <?php
-namespace Service\Modules\User;
+namespace Service\Modules\Api;
 
 use Phalcon\DiInterface;
 use Phalcon\Loader;
@@ -20,8 +20,8 @@ class Module implements ModuleDefinitionInterface
         $loader = new Loader();
 
         $loader->registerNamespaces([
-            'Service\Modules\User\Controllers' => __DIR__ . '/controllers/',
-            'Service\Modules\User\Models' => __DIR__ . '/models/',
+            'Service\Modules\Api\Controllers' => __DIR__ . '/controllers/',
+            'Service\Modules\Api\Models' => __DIR__ . '/models/',
         ]);
 
         $loader->register();
@@ -40,7 +40,7 @@ class Module implements ModuleDefinitionInterface
         $di->set("dispatcher", function () {
             $dispatcher = new Dispatcher();
 
-            $dispatcher->setDefaultNamespace("Service\Modules\User\Controllers");
+            $dispatcher->setDefaultNamespace("Service\Modules\Api\Controllers");
 
             return $dispatcher;
         });
