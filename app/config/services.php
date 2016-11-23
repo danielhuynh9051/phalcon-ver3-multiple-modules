@@ -39,22 +39,33 @@ $di->setShared('modelsMetadata', function () {
 /**
  * Configure the Volt service for rendering .volt templates
  */
+// $di->setShared('voltShared', function ($view) {
+//     $config = $this->getConfig();
+
+//     $volt = new VoltEngine($view, $this);
+//     $volt->setOptions([
+//         'compiledPath' => function($templatePath) use ($config) {
+
+//             // Makes the view path into a portable fragment
+//             $templateFrag = str_replace($config->application->appDir, '', $templatePath);
+
+//             // Replace '/' with a safe '%%'
+//             $templateFrag = str_replace('/', '_', $templateFrag);
+
+//             return $config->application->cacheDir . 'volt/' . $templateFrag . '.php';
+//         }
+//     ]);
+
+//     return $volt;
+// });
+
+/* Fix compiledPath on Windows */
 $di->setShared('voltShared', function ($view) {
     $config = $this->getConfig();
-
     $volt = new VoltEngine($view, $this);
     $volt->setOptions([
-        'compiledPath' => function($templatePath) use ($config) {
-
-            // Makes the view path into a portable fragment
-            $templateFrag = str_replace($config->application->appDir, '', $templatePath);
-
-            // Replace '/' with a safe '%%'
-            $templateFrag = str_replace('/', '_', $templateFrag);
-
-            return $config->application->cacheDir . 'volt/' . $templateFrag . '.php';
-        }
+        'compiledPath' => $config->application->voltDir,
+        'compiledSeparator' => '_'
     ]);
-
     return $volt;
 });
