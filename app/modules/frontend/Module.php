@@ -7,6 +7,8 @@ use Phalcon\Mvc\View;
 use Phalcon\Mvc\View\Engine\Php as PhpEngine;
 use Phalcon\Mvc\ModuleDefinitionInterface;
 use Phalcon\Mvc\Dispatcher;
+// For multiple database if you need
+// use Phalcon\Db\Adapter\Pdo\Mysql;
 
 class Module implements ModuleDefinitionInterface
 {
@@ -61,6 +63,7 @@ class Module implements ModuleDefinitionInterface
         });
         /**
         * Setting up database for this module
+        * For multiple database if you need
         */
         // $di->set('db', function () {
         //     return new Mysql(
