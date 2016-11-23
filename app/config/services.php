@@ -50,7 +50,7 @@ $di->setShared('voltShared', function ($view) {
             $templateFrag = str_replace($config->application->appDir, '', $templatePath);
 
             // Replace '/' with a safe '%%'
-            $templateFrag = str_replace('/', '%%', $templateFrag);
+            $templateFrag = str_replace('/', '_', $templateFrag);
 
             return $config->application->cacheDir . 'volt/' . $templateFrag . '.php';
         }

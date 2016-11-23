@@ -62,15 +62,3 @@ $di->setShared('dispatcher', function() {
     // $dispatcher->setDefaultNamespace('Service\Modules\Frontend\Controllers');
     return $dispatcher;
 });
-
-$di->setShared('voltShared', function ($view) {
-    $config = $this->getConfig();
-
-    $volt = new VoltEngine($view, $this);
-    $volt->setOptions([
-        'compiledPath' => $config->application->voltDir . 'frontend/',
-        'compiledSeparator' => '_'
-    ]);
-
-    return $volt;
-});
