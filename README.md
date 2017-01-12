@@ -37,5 +37,6 @@
         'user' => ['className' => 'Service\Modules\User\Module']
     ```
 
+### P/s: Remember create `.phalcon` folder in Project root Folder ###
 ## Done! Hope it'll help you.
 ### Daniel - sir.truonghuynh@gmail.com - https://fb.com/mr.d.luffy.93
