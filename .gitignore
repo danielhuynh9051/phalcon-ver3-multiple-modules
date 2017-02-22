@@ -1,2 +1,6 @@
-/cache/
-/config/development/
+cache/volt/*.php
+.DS_Store*
+Thumbs.db
+*.sublime-project
+*.sublime-workspace
+node_modules
